@@ -1,0 +1,4 @@
+node_modules/
+server/serviceAccountKey.json
+server/firebase-service-account.json
+*.json
