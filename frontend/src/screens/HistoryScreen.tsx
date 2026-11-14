@@ -58,6 +58,7 @@ export default function HistoryScreen() {
       // ⚠️ 개발 환경 가이드: Android 에뮬레이터는 http://10.0.2.2:3000 사용 권장
       const response = await fetch(
         `http://localhost:3000/quote/history?today=${localDateStr}&limit=7`,
+        // `http://172.20.10.4:3000/quote/history?today=${localDateStr}&limit=7`,
       );
       const serverData: Quote[] = await response.json();
 

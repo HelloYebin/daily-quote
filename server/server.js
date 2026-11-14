@@ -111,7 +111,6 @@ app.get("/quote/today", async (req, res) => {
         })
         .replace(/\. /g, "-")
         .replace(".", "");
-
     const snapshot = await db
       .collection("Quotes")
       .where("display_date", "==", clientDate)

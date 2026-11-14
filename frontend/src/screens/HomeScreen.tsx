@@ -47,7 +47,7 @@ export default function HomeScreen() {
           return;
         }
       }
-
+      console.log('cachedData', cachedData);
       // 2. 캐시 없으면 서버 요청
       const response = await fetchQuote();
 

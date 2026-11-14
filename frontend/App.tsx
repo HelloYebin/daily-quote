@@ -13,26 +13,26 @@ import SavedScreen from './src/screens/SavedScreen';
 const Stack = createNativeStackNavigator();
 export default function App() {
   // 🔔 기존 FCM 토큰 가져오기 로직 (그대로 유지)
-  useEffect(() => {
-    const getToken = async () => {
-      try {
-        await messaging().registerDeviceForRemoteMessages();
-        const token = await messaging().getToken();
-        console.log('FCM Token:', token);
-      } catch (e) {
-        console.log('FCM error:', e);
-      }
-    };
-    getToken();
-  }, []);
+  // useEffect(() => {
+  //   const getToken = async () => {
+  //     try {
+  //       await messaging().registerDeviceForRemoteMessages();
+  //       const token = await messaging().getToken();
+  //       console.log('FCM Token:', token);
+  //     } catch (e) {
+  //       console.log('FCM error:', e);
+  //     }
+  //   };
+  //   getToken();
+  // }, []);
 
-  // 📩 기존 포그라운드 푸시 리스너 로직 (그대로 유지)
-  useEffect(() => {
-    const unsubscribe = messaging().onMessage(async remoteMessage => {
-      console.log('📩 foreground push:', remoteMessage.notification);
-    });
-    return unsubscribe;
-  }, []);
+  // // 📩 기존 포그라운드 푸시 리스너 로직 (그대로 유지)
+  // useEffect(() => {
+  //   const unsubscribe = messaging().onMessage(async remoteMessage => {
+  //     console.log('📩 foreground push:', remoteMessage.notification);
+  //   });
+  //   return unsubscribe;
+  // }, []);
 
   const { t } = useTranslation();
 

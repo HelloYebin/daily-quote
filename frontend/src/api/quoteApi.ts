@@ -13,6 +13,7 @@ export const fetchQuote = async (): Promise<Quote> => {
   const todayStr = getFormattedToday();
   const res = await fetch(
     `http://127.0.0.1:3000/quote/today?today=${todayStr}`,
+    // `http://172.20.10.4:3000/quote/today?today=${todayStr}`,
   );
   if (!res.ok) {
     throw new Error('서버에서 명언을 가져오는데 실패했습니다.');
