@@ -39,7 +39,12 @@ The app is built with React Native and includes a separate Node.js backend.
 
 ## Screenshots
 
-*Screenshots will be added here.*
+<p align="center">
+  <img src="screenshots/home.png" width="200" />
+  <img src="screenshots/history.png" width="200" />
+  <img src="screenshots/saved.png" width="200" />
+  <img src="screenshots/add-quote.png" width="200" />
+</p>
 
 ## Getting Started
 
